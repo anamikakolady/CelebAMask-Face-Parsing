@@ -2,7 +2,7 @@
 
 A lightweight face parsing model developed for the AI6126 Advanced Computer Vision Face Parsing Challenge using the CelebAMask-HQ dataset.
 
-## Sample Results
+## 🔍 Sample Results
 <p align="center">
   <img src="assets/sample_input.jpg" width="250" alt="Input Image">
   <img src="assets/sample_prediction.png" width="250" alt="Predicted Mask">
@@ -12,9 +12,9 @@ A lightweight face parsing model developed for the AI6126 Advanced Computer Visi
   <em>Input Image (left) and Predicted Segmentation Mask (right).</em>
 </p>
 
-## Overview
+## 📖 Overview
 
-This project proposes a MobileNet U-Net architecture enhanced with a Convolutional Block Attention Module (CBAM) for accurate and computationally efficient face parsing. The model combines depthwise separable convolutions, attention mechanisms, and dilated convolutions to achieve strong segmentation performance while maintaining a low parameter count.
+This project proposes a MobileNet U-Net architecture enhanced with a Convolutional Block Attention Module (CBAM) for accurate and computationally efficient face parsing. The model combines depthwise separable convolutions, attention mechanisms, and dilated convolutions to achieve strong segmentation performance while maintaining a low parameter count. The model was developed for the AI6126 Advanced Computer Vision Face Parsing Challenge and trained on the CelebAMask-HQ dataset to perform pixel-level semantic segmentation of facial components.
 
 ### Key Features
 
@@ -25,7 +25,7 @@ This project proposes a MobileNet U-Net architecture enhanced with a Convolution
 * Bilinear upsampling to reduce checkerboard artifacts
 * Lightweight design with approximately 1.46 million trainable parameters
 
-## Results
+## 📊 Results
 
 | Metric               | Score   |
 | -------------------- | ------- |
@@ -33,7 +33,17 @@ This project proposes a MobileNet U-Net architecture enhanced with a Convolution
 | Validation F-Measure | 0.7868  |
 | Test F-Measure       | 0.81608 |
 
-## Repository Structure
+## ⚙️ Training Configuration
+
+- Framework: PyTorch
+- Optimizer: Adam
+- Learning Rate: 7 × 10⁻⁴
+- Batch Size: 8
+- Epochs: 80
+- Attention Module: CBAM
+- Parameters: ~1.46M
+
+## 📂 Repository Structure
 
 ```text
 ├── scoring_result/       # Predicted segmentation masks
@@ -48,7 +58,7 @@ This project proposes a MobileNet U-Net architecture enhanced with a Convolution
 └── README.md
 ```
 
-## Installation
+## 🚀 Installation
 
 ```bash
 pip install -r requirements.txt
@@ -66,20 +76,16 @@ python main.py
 python run.py
 ```
 
-## Author
+## 👩‍💻 Author
 
 **Anamika Martin Kolady**
 
 M.Sc. Artificial Intelligence, Nanyang Technological University (NTU)
 
-## Academic Integrity Notice
+## ⚠️ Academic Integrity Notice
 
-This repository is shared for educational purposes, academic discussion, and portfolio demonstration. It contains work completed as part of an academic project at Nanyang Technological University (NTU).
+This repository is shared for educational, research, and portfolio purposes. Students may use it as a reference to understand the concepts, methodology, and implementation details presented.
 
-If you are a student working on a similar assignment, challenge, or coursework, you may refer to this repository to understand concepts, implementation approaches, and experimental methodologies. However, you must not copy, reproduce, or submit any portion of this work as your own.
+Any use of material from this repository should be appropriately cited in accordance with the academic integrity policies of your institution. Copying or submitting any part of this work as your own may constitute academic misconduct.
 
-Any use of ideas, code, results, or documentation from this repository should be appropriately cited in accordance with your institution's academic integrity policies.
-
-The author does not grant permission for this repository to be used for plagiarism, academic misconduct, or unauthorized submission. The author assumes no responsibility for any misuse of the contents of this repository.
-
-Students are encouraged to consult and comply with the academic integrity policies of their respective institutions before using any material from this repository.
+The author does not grant permission for plagiarism or unauthorized academic submissions and assumes no responsibility for any misuse of the contents of this repository.
