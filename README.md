@@ -3,14 +3,9 @@
 A lightweight face parsing model developed for the AI6126 Advanced Computer Vision Face Parsing Challenge using the CelebAMask-HQ dataset.
 
 ## Sample Results
-
-### Input Image
-
-<img src="assets/sample_input.png" width="350">
-
-### Predicted Segmentation Mask
-
-<img src="assets/sample_prediction.png" width="350">
+| Input Image | Predicted Mask |
+|------------|---------------|
+| ![](assets/sample_input.jpg) | ![](assets/sample_prediction.png) |
 
 ## Overview
 
