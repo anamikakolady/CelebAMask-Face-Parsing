@@ -2,6 +2,11 @@
 
 A lightweight face parsing model developed for the AI6126 Advanced Computer Vision Face Parsing Challenge using the CelebAMask-HQ dataset.
 
+## Sample Results
+| Input Image | Predicted Mask |
+|------------|---------------|
+| ![](assets/sample_input.jpg) | ![](assets/sample_prediction.png) |
+
 ## Overview
 
 This project proposes a MobileNet U-Net architecture enhanced with a Convolutional Block Attention Module (CBAM) for accurate and computationally efficient face parsing. The model combines depthwise separable convolutions, attention mechanisms, and dilated convolutions to achieve strong segmentation performance while maintaining a low parameter count.
