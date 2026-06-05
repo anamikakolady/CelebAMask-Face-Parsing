@@ -1,0 +1,231 @@
+Total trainable parameters: 1457104
+Learning Rate: 0.0007 , Epochs:  80 , Batch Size:  8 , Weight decay:  0.0001
+MobileNet_UNet_CBAM(
+  (enc1): EncoderBlock(
+    (conv1): DepthwiseSeparableConv(
+      (depthwise): Conv2d(3, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=3, bias=False)
+      (pointwise): Conv2d(3, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv2): DepthwiseSeparableConv(
+      (depthwise): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False)
+      (pointwise): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv3): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+    (downsample): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (enc2): EncoderBlock(
+    (conv1): DepthwiseSeparableConv(
+      (depthwise): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False)
+      (pointwise): Conv2d(32, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv2): DepthwiseSeparableConv(
+      (depthwise): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+      (pointwise): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+    (downsample): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (enc3): EncoderBlock(
+    (conv1): DepthwiseSeparableConv(
+      (depthwise): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+      (pointwise): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv2): DepthwiseSeparableConv(
+      (depthwise): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=128, bias=False)
+      (pointwise): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+    (downsample): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (enc4): EncoderBlock(
+    (conv1): DepthwiseSeparableConv(
+      (depthwise): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=128, bias=False)
+      (pointwise): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv2): DepthwiseSeparableConv(
+      (depthwise): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256, bias=False)
+      (pointwise): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2), dilation=(2, 2), bias=False)
+    (downsample): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  )
+  (bottleneck): BottleneckWithCBAM(
+    (conv): DepthwiseSeparableConv(
+      (depthwise): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256, bias=False)
+      (pointwise): Conv2d(256, 512, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (cbam): CBAM(
+      (avg_pool): AdaptiveAvgPool2d(output_size=1)
+      (max_pool): AdaptiveMaxPool2d(output_size=1)
+      (mlp): Sequential(
+        (0): Linear(in_features=512, out_features=32, bias=False)
+        (1): ReLU(inplace=True)
+        (2): Linear(in_features=32, out_features=512, bias=False)
+      )
+      (sigmoid_channel): Sigmoid()
+      (conv_spatial): Conv2d(2, 1, kernel_size=(9, 9), stride=(1, 1), padding=(4, 4), bias=False)
+      (sigmoid_spatial): Sigmoid()
+    )
+  )
+  (dec4): DecoderBlock(
+    (upsample): Upsample(scale_factor=2.0, mode='bilinear')
+    (conv1): DepthwiseSeparableConv(
+      (depthwise): Conv2d(768, 768, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=768, bias=False)
+      (pointwise): Conv2d(768, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv2): DepthwiseSeparableConv(
+      (depthwise): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=256, bias=False)
+      (pointwise): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+  )
+  (dec3): DecoderBlock(
+    (upsample): Upsample(scale_factor=2.0, mode='bilinear')
+    (conv1): DepthwiseSeparableConv(
+      (depthwise): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=384, bias=False)
+      (pointwise): Conv2d(384, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv2): DepthwiseSeparableConv(
+      (depthwise): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=128, bias=False)
+      (pointwise): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+  )
+  (dec2): DecoderBlock(
+    (upsample): Upsample(scale_factor=2.0, mode='bilinear')
+    (conv1): DepthwiseSeparableConv(
+      (depthwise): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+      (pointwise): Conv2d(192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv2): DepthwiseSeparableConv(
+      (depthwise): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=64, bias=False)
+      (pointwise): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+  )
+  (dec1): DecoderBlock(
+    (upsample): Upsample(scale_factor=2.0, mode='bilinear')
+    (conv1): DepthwiseSeparableConv(
+      (depthwise): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=96, bias=False)
+      (pointwise): Conv2d(96, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+    (conv2): DepthwiseSeparableConv(
+      (depthwise): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=32, bias=False)
+      (pointwise): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (leaky_relu): LeakyReLU(negative_slope=0.01, inplace=True)
+    )
+  )
+  (final_conv): Conv2d(32, 19, kernel_size=(1, 1), stride=(1, 1))
+)
+Epoch [1/80], Training Loss: 2.1501, Training Accuracy: 0.5961,Val Loss: 1.7242, Val Accuracy: 0.7389, Val F-score: 0.1626
+Epoch [2/80], Training Loss: 1.5407, Training Accuracy: 0.7898,Val Loss: 1.4669, Val Accuracy: 0.8129, Val F-score: 0.2615
+Epoch [3/80], Training Loss: 1.4251, Training Accuracy: 0.8212,Val Loss: 1.3886, Val Accuracy: 0.8372, Val F-score: 0.3338
+Epoch [4/80], Training Loss: 1.3628, Training Accuracy: 0.8439,Val Loss: 1.3435, Val Accuracy: 0.8541, Val F-score: 0.4419
+Epoch [5/80], Training Loss: 1.3266, Training Accuracy: 0.8605,Val Loss: 1.3592, Val Accuracy: 0.8398, Val F-score: 0.5119
+Epoch [6/80], Training Loss: 1.3011, Training Accuracy: 0.8718,Val Loss: 1.2987, Val Accuracy: 0.8709, Val F-score: 0.6139
+Epoch [7/80], Training Loss: 1.2752, Training Accuracy: 0.8829,Val Loss: 1.2798, Val Accuracy: 0.8803, Val F-score: 0.6407
+Epoch [8/80], Training Loss: 1.2651, Training Accuracy: 0.8852,Val Loss: 1.2824, Val Accuracy: 0.8794, Val F-score: 0.6405
+Epoch [9/80], Training Loss: 1.2498, Training Accuracy: 0.8938,Val Loss: 1.3005, Val Accuracy: 0.8697, Val F-score: 0.6616
+Epoch [10/80], Training Loss: 1.2406, Training Accuracy: 0.8979,Val Loss: 1.2679, Val Accuracy: 0.8820, Val F-score: 0.6887
+Epoch [11/80], Training Loss: 1.2288, Training Accuracy: 0.9031,Val Loss: 1.2897, Val Accuracy: 0.8761, Val F-score: 0.6672
+Epoch [12/80], Training Loss: 1.2215, Training Accuracy: 0.9065,Val Loss: 1.2897, Val Accuracy: 0.8701, Val F-score: 0.6928
+Epoch [13/80], Training Loss: 1.2130, Training Accuracy: 0.9112,Val Loss: 1.3759, Val Accuracy: 0.8362, Val F-score: 0.6872
+Epoch [14/80], Training Loss: 1.2015, Training Accuracy: 0.9165,Val Loss: 1.2699, Val Accuracy: 0.8855, Val F-score: 0.7203
+Epoch [15/80], Training Loss: 1.1966, Training Accuracy: 0.9188,Val Loss: 1.2980, Val Accuracy: 0.8638, Val F-score: 0.7150
+Epoch [16/80], Training Loss: 1.1885, Training Accuracy: 0.9226,Val Loss: 1.2569, Val Accuracy: 0.8887, Val F-score: 0.7329
+Epoch [17/80], Training Loss: 1.1811, Training Accuracy: 0.9263,Val Loss: 1.2349, Val Accuracy: 0.9021, Val F-score: 0.7450
+Epoch [18/80], Training Loss: 1.1770, Training Accuracy: 0.9280,Val Loss: 1.2414, Val Accuracy: 0.8999, Val F-score: 0.7466
+Epoch [19/80], Training Loss: 1.1747, Training Accuracy: 0.9293,Val Loss: 1.2444, Val Accuracy: 0.8987, Val F-score: 0.7495
+Epoch [20/80], Training Loss: 1.1672, Training Accuracy: 0.9327,Val Loss: 1.2182, Val Accuracy: 0.9096, Val F-score: 0.7715
+Epoch [21/80], Training Loss: 1.1656, Training Accuracy: 0.9330,Val Loss: 1.2241, Val Accuracy: 0.9074, Val F-score: 0.7522
+Epoch [22/80], Training Loss: 1.1757, Training Accuracy: 0.9279,Val Loss: 1.3168, Val Accuracy: 0.8593, Val F-score: 0.7225
+Epoch [23/80], Training Loss: 1.1623, Training Accuracy: 0.9351,Val Loss: 1.2634, Val Accuracy: 0.8853, Val F-score: 0.7603
+Epoch [24/80], Training Loss: 1.1542, Training Accuracy: 0.9388,Val Loss: 1.2493, Val Accuracy: 0.8964, Val F-score: 0.7562
+Epoch [25/80], Training Loss: 1.1476, Training Accuracy: 0.9422,Val Loss: 1.2410, Val Accuracy: 0.8992, Val F-score: 0.7690
+Epoch [26/80], Training Loss: 1.1498, Training Accuracy: 0.9410,Val Loss: 1.2477, Val Accuracy: 0.8945, Val F-score: 0.7572
+Epoch [27/80], Training Loss: 1.1272, Training Accuracy: 0.9528,Val Loss: 1.2053, Val Accuracy: 0.9169, Val F-score: 0.7876
+Epoch [28/80], Training Loss: 1.1163, Training Accuracy: 0.9583,Val Loss: 1.2071, Val Accuracy: 0.9171, Val F-score: 0.7910
+Epoch [29/80], Training Loss: 1.1113, Training Accuracy: 0.9608,Val Loss: 1.2077, Val Accuracy: 0.9174, Val F-score: 0.7894
+Epoch [30/80], Training Loss: 1.1094, Training Accuracy: 0.9619,Val Loss: 1.2096, Val Accuracy: 0.9167, Val F-score: 0.7892
+Epoch [31/80], Training Loss: 1.1075, Training Accuracy: 0.9627,Val Loss: 1.2089, Val Accuracy: 0.9177, Val F-score: 0.7891
+Epoch [32/80], Training Loss: 1.1045, Training Accuracy: 0.9642,Val Loss: 1.2123, Val Accuracy: 0.9164, Val F-score: 0.7868
+Epoch [33/80], Training Loss: 1.1025, Training Accuracy: 0.9651,Val Loss: 1.2123, Val Accuracy: 0.9170, Val F-score: 0.7877
+Epoch [34/80], Training Loss: 1.0989, Training Accuracy: 0.9671,Val Loss: 1.2129, Val Accuracy: 0.9170, Val F-score: 0.7878
+Epoch [35/80], Training Loss: 1.0974, Training Accuracy: 0.9676,Val Loss: 1.2141, Val Accuracy: 0.9164, Val F-score: 0.7874
+Epoch [36/80], Training Loss: 1.0974, Training Accuracy: 0.9678,Val Loss: 1.2148, Val Accuracy: 0.9164, Val F-score: 0.7875
+Epoch [37/80], Training Loss: 1.0969, Training Accuracy: 0.9680,Val Loss: 1.2156, Val Accuracy: 0.9164, Val F-score: 0.7863
+Epoch [38/80], Training Loss: 1.0960, Training Accuracy: 0.9685,Val Loss: 1.2155, Val Accuracy: 0.9163, Val F-score: 0.7878
+Epoch [39/80], Training Loss: 1.0962, Training Accuracy: 0.9685,Val Loss: 1.2164, Val Accuracy: 0.9160, Val F-score: 0.7865
+Epoch [40/80], Training Loss: 1.0950, Training Accuracy: 0.9690,Val Loss: 1.2159, Val Accuracy: 0.9162, Val F-score: 0.7871
+Epoch [41/80], Training Loss: 1.0945, Training Accuracy: 0.9693,Val Loss: 1.2165, Val Accuracy: 0.9161, Val F-score: 0.7862
+Epoch [42/80], Training Loss: 1.0946, Training Accuracy: 0.9692,Val Loss: 1.2166, Val Accuracy: 0.9162, Val F-score: 0.7869
+Epoch [43/80], Training Loss: 1.0947, Training Accuracy: 0.9693,Val Loss: 1.2166, Val Accuracy: 0.9158, Val F-score: 0.7867
+Epoch [44/80], Training Loss: 1.0948, Training Accuracy: 0.9692,Val Loss: 1.2171, Val Accuracy: 0.9159, Val F-score: 0.7866
+Epoch [45/80], Training Loss: 1.0943, Training Accuracy: 0.9694,Val Loss: 1.2181, Val Accuracy: 0.9157, Val F-score: 0.7866
+Epoch [46/80], Training Loss: 1.0938, Training Accuracy: 0.9696,Val Loss: 1.2169, Val Accuracy: 0.9159, Val F-score: 0.7862
+Epoch [47/80], Training Loss: 1.0952, Training Accuracy: 0.9691,Val Loss: 1.2172, Val Accuracy: 0.9159, Val F-score: 0.7867
+Epoch [48/80], Training Loss: 1.0938, Training Accuracy: 0.9696,Val Loss: 1.2168, Val Accuracy: 0.9162, Val F-score: 0.7856
+Epoch [49/80], Training Loss: 1.0946, Training Accuracy: 0.9694,Val Loss: 1.2173, Val Accuracy: 0.9161, Val F-score: 0.7869
+Epoch [50/80], Training Loss: 1.0944, Training Accuracy: 0.9694,Val Loss: 1.2172, Val Accuracy: 0.9160, Val F-score: 0.7857
+Epoch [51/80], Training Loss: 1.0939, Training Accuracy: 0.9696,Val Loss: 1.2176, Val Accuracy: 0.9157, Val F-score: 0.7864
+Epoch [52/80], Training Loss: 1.0943, Training Accuracy: 0.9694,Val Loss: 1.2173, Val Accuracy: 0.9160, Val F-score: 0.7856
+Epoch [53/80], Training Loss: 1.0943, Training Accuracy: 0.9695,Val Loss: 1.2170, Val Accuracy: 0.9161, Val F-score: 0.7863
+Epoch [54/80], Training Loss: 1.0941, Training Accuracy: 0.9694,Val Loss: 1.2173, Val Accuracy: 0.9158, Val F-score: 0.7861
+Epoch [55/80], Training Loss: 1.0944, Training Accuracy: 0.9694,Val Loss: 1.2176, Val Accuracy: 0.9157, Val F-score: 0.7864
+Epoch [56/80], Training Loss: 1.0949, Training Accuracy: 0.9692,Val Loss: 1.2171, Val Accuracy: 0.9160, Val F-score: 0.7855
+Epoch [57/80], Training Loss: 1.0946, Training Accuracy: 0.9694,Val Loss: 1.2176, Val Accuracy: 0.9159, Val F-score: 0.7863
+Epoch [58/80], Training Loss: 1.0938, Training Accuracy: 0.9697,Val Loss: 1.2176, Val Accuracy: 0.9158, Val F-score: 0.7863
+Epoch [59/80], Training Loss: 1.0936, Training Accuracy: 0.9697,Val Loss: 1.2173, Val Accuracy: 0.9159, Val F-score: 0.7854
+Epoch [60/80], Training Loss: 1.0941, Training Accuracy: 0.9695,Val Loss: 1.2176, Val Accuracy: 0.9160, Val F-score: 0.7856
+Epoch [61/80], Training Loss: 1.0942, Training Accuracy: 0.9695,Val Loss: 1.2177, Val Accuracy: 0.9157, Val F-score: 0.7865
+Epoch [62/80], Training Loss: 1.0935, Training Accuracy: 0.9698,Val Loss: 1.2182, Val Accuracy: 0.9157, Val F-score: 0.7861
+Epoch [63/80], Training Loss: 1.0944, Training Accuracy: 0.9695,Val Loss: 1.2178, Val Accuracy: 0.9154, Val F-score: 0.7864
+Epoch [64/80], Training Loss: 1.0935, Training Accuracy: 0.9697,Val Loss: 1.2174, Val Accuracy: 0.9159, Val F-score: 0.7868
+Epoch [65/80], Training Loss: 1.0936, Training Accuracy: 0.9698,Val Loss: 1.2181, Val Accuracy: 0.9156, Val F-score: 0.7860
+Epoch [66/80], Training Loss: 1.0934, Training Accuracy: 0.9698,Val Loss: 1.2176, Val Accuracy: 0.9159, Val F-score: 0.7865
+Epoch [67/80], Training Loss: 1.0939, Training Accuracy: 0.9696,Val Loss: 1.2178, Val Accuracy: 0.9159, Val F-score: 0.7858
+Epoch [68/80], Training Loss: 1.0941, Training Accuracy: 0.9696,Val Loss: 1.2176, Val Accuracy: 0.9160, Val F-score: 0.7866
+Epoch [69/80], Training Loss: 1.0935, Training Accuracy: 0.9698,Val Loss: 1.2177, Val Accuracy: 0.9160, Val F-score: 0.7863
+Epoch [70/80], Training Loss: 1.0941, Training Accuracy: 0.9695,Val Loss: 1.2183, Val Accuracy: 0.9156, Val F-score: 0.7863
+Epoch [71/80], Training Loss: 1.0938, Training Accuracy: 0.9697,Val Loss: 1.2180, Val Accuracy: 0.9158, Val F-score: 0.7869
+Epoch [72/80], Training Loss: 1.0934, Training Accuracy: 0.9699,Val Loss: 1.2188, Val Accuracy: 0.9155, Val F-score: 0.7856
+Epoch [73/80], Training Loss: 1.0934, Training Accuracy: 0.9698,Val Loss: 1.2175, Val Accuracy: 0.9160, Val F-score: 0.7859
+Epoch [74/80], Training Loss: 1.0940, Training Accuracy: 0.9696,Val Loss: 1.2184, Val Accuracy: 0.9155, Val F-score: 0.7863
+Epoch [75/80], Training Loss: 1.0936, Training Accuracy: 0.9697,Val Loss: 1.2181, Val Accuracy: 0.9159, Val F-score: 0.7862
+Epoch [76/80], Training Loss: 1.0937, Training Accuracy: 0.9697,Val Loss: 1.2185, Val Accuracy: 0.9157, Val F-score: 0.7862
+Epoch [77/80], Training Loss: 1.0939, Training Accuracy: 0.9697,Val Loss: 1.2182, Val Accuracy: 0.9156, Val F-score: 0.7850
+Epoch [78/80], Training Loss: 1.0939, Training Accuracy: 0.9697,Val Loss: 1.2182, Val Accuracy: 0.9159, Val F-score: 0.7863
+Epoch [79/80], Training Loss: 1.0934, Training Accuracy: 0.9698,Val Loss: 1.2196, Val Accuracy: 0.9151, Val F-score: 0.7857
+Epoch [80/80], Training Loss: 1.0936, Training Accuracy: 0.9698,Val Loss: 1.2189, Val Accuracy: 0.9155, Val F-score: 0.7868
+
+Total Training Time: 3078.28 seconds (51.30 minutes)
