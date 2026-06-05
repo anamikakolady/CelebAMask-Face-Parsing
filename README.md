@@ -9,7 +9,7 @@ A lightweight face parsing model developed for the AI6126 Advanced Computer Visi
 </p>
 
 <p align="center">
-  <em>Input image (left) and predicted segmentation mask (right).</em>
+  <em>Input Image (left) and Predicted Segmentation Mask (right).</em>
 </p>
 
 ## Overview
