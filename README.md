@@ -1,51 +1,56 @@
 # MobileNet U-Net with CBAM for Face Parsing
 
-This repository contains a lightweight face parsing model developed for the CelebAMask-HQ dataset as part of the AI6126 Advanced Computer Vision project.
+A lightweight face parsing model developed for the AI6126 Advanced Computer Vision Face Parsing Challenge using the CelebAMask-HQ dataset.
 
 ## Overview
 
-The proposed architecture combines:
+This project proposes a MobileNet U-Net architecture enhanced with a Convolutional Block Attention Module (CBAM) for accurate and computationally efficient face parsing. The model combines depthwise separable convolutions, attention mechanisms, and dilated convolutions to achieve strong segmentation performance while maintaining a low parameter count.
 
-* **MobileNet-style depthwise separable convolutions** for computational efficiency
-* **U-Net** encoder-decoder structure for semantic segmentation
-* **Convolutional Block Attention Module (CBAM)** for enhanced feature representation
-* **Dilated convolutions** for improved contextual understanding
-* **Bilinear upsampling** for smoother segmentation outputs
+### Key Features
 
-The model is designed to achieve accurate facial component segmentation while maintaining a low parameter count (~1.46M trainable parameters).
+* MobileNet-style depthwise separable convolutions for efficient computation
+* U-Net encoder-decoder architecture for semantic segmentation
+* CBAM attention module for improved feature representation
+* Dilated convolutions for enhanced contextual understanding
+* Bilinear upsampling to reduce checkerboard artifacts
+* Lightweight design with approximately 1.46 million trainable parameters
 
-## Performance
+## Results
 
-* Validation Accuracy: **91.55%**
-* Validation F-Measure: **0.7868**
-* Test F-Measure: **0.81608**
+| Metric               | Score   |
+| -------------------- | ------- |
+| Validation Accuracy  | 91.55%  |
+| Validation F-Measure | 0.7868  |
+| Test F-Measure       | 0.81608 |
 
 ## Repository Structure
 
-* `dev-public/` – Training images and masks
-* `test-public/` – Test images
-* `model/` – Trained model checkpoint
-* `scoring_result/` – Predicted segmentation masks
-* `mobilenet_unet_cbam.py` – Model architecture
-* `main.py` – Training pipeline
-* `run.py` – Inference and mask generation
-* `requirements.txt` – Project dependencies
+```text
+CelebAMask_Face_Parsing/
+├── dev-public/           # Training images and masks
+├── test-public/          # Test images
+├── model/                # Trained model checkpoint
+├── scoring_result/       # Predicted segmentation masks
+├── mobilenet_unet_cbam.py
+├── main.py
+├── run.py
+├── requirements.txt
+└── README.md
+```
 
-## Usage
-
-Install dependencies:
+## Installation
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Train the model:
+## Training
 
 ```bash
 python main.py
 ```
 
-Generate predictions:
+## Inference
 
 ```bash
 python run.py
@@ -53,5 +58,8 @@ python run.py
 
 ## Author
 
-Anamika Martin Kolady
-M.Sc. Artificial Intelligence, Nanyang Technological University
+**Anamika Martin Kolady**
+
+M.Sc. Artificial Intelligence
+Nanyang Technological University (NTU)
+
