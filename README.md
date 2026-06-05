@@ -60,6 +60,5 @@ python run.py
 
 **Anamika Martin Kolady**
 
-M.Sc. Artificial Intelligence
-Nanyang Technological University (NTU)
+M.Sc. Artificial Intelligence, Nanyang Technological University (NTU)
 
