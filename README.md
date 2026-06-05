@@ -58,19 +58,21 @@ This project proposes a MobileNet U-Net architecture enhanced with a Convolution
 └── README.md
 ```
 
-## 🚀 Installation
+## 🚀 Usage
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Training
+### Training
 
 ```bash
 python main.py
 ```
 
-## Inference
+### Inference
 
 ```bash
 python run.py
