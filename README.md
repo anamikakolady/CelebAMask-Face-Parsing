@@ -72,3 +72,14 @@ python run.py
 
 M.Sc. Artificial Intelligence, Nanyang Technological University (NTU)
 
+## Academic Integrity Notice
+
+This repository is shared for educational purposes, academic discussion, and portfolio demonstration. It contains work completed as part of an academic project at Nanyang Technological University (NTU).
+
+If you are a student working on a similar assignment, challenge, or coursework, you may refer to this repository to understand concepts, implementation approaches, and experimental methodologies. However, you must not copy, reproduce, or submit any portion of this work as your own.
+
+Any use of ideas, code, results, or documentation from this repository should be appropriately cited in accordance with your institution's academic integrity policies.
+
+The author does not grant permission for this repository to be used for plagiarism, academic misconduct, or unauthorized submission. The author assumes no responsibility for any misuse of the contents of this repository.
+
+Students are encouraged to consult and comply with the academic integrity policies of their respective institutions before using any material from this repository.
