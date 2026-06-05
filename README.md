@@ -26,15 +26,15 @@ This project proposes a MobileNet U-Net architecture enhanced with a Convolution
 ## Repository Structure
 
 ```text
-CelebAMask_Face_Parsing/
-├── dev-public/           # Training images and masks
-├── test-public/          # Test images
-├── model/                # Trained model checkpoint
 ├── scoring_result/       # Predicted segmentation masks
-├── mobilenet_unet_cbam.py
-├── main.py
-├── run.py
-├── requirements.txt
+├── CelebAMask_Face_Parsing/
+│   ├── dev-public/       # Training images and masks
+│   ├── test-public/      # Test images
+│   ├── model/            # Trained model checkpoint
+│   ├── mobilenet_unet_cbam.py
+│   ├── main.py
+│   ├── run.py
+│   └── requirements.txt
 └── README.md
 ```
 
